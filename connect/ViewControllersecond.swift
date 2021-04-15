@@ -18,6 +18,7 @@ class ViewControllersecond: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 
     @IBAction func signUp(_ sender: Any)
@@ -46,6 +47,7 @@ class ViewControllersecond: UIViewController {
                 if Password.text == dict["password"]
                 {
                     message.text = "Welcome \(dict["name"]!)"
+                    message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 }
                 else
                 {
@@ -57,6 +59,7 @@ class ViewControllersecond: UIViewController {
             else
             {
                 message.text = "Username not found"
+                message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             }
             print("Username entered : \(UserName.text!)")
             print("Password entered : \(Password.text!)")

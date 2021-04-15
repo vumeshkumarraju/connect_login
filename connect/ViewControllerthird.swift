@@ -19,7 +19,7 @@ class ViewControllerthird: UIViewController {
     var dict1:[String:String] = ["name":"umesh","username":"umeshkumar.123","phoneno":"1234567890","password":"umesh123"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
     @IBAction func signUp(_ sender: Any)
@@ -47,7 +47,8 @@ class ViewControllerthird: UIViewController {
         }
         else if Password.text != confirmPassword.text
         {
-            message.text = "Correct the confirm password"
+            message.text = "Correct the password"
+            message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             confirmPassword.placeholder = "Fill Confirm Password"
             print("password and confirm passowrd are not matching.")
         }
@@ -60,6 +61,7 @@ class ViewControllerthird: UIViewController {
             print("The info stored : \(dict1)")
             print("WELCOME \(name.text!)")
             message.text = "WELCOME \(name.text!)"
+            message.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
 }
